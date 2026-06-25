@@ -2,6 +2,7 @@ import React from 'react'
 import { forwardRef } from 'react'
 import { useId } from 'react'
 
+// used forward ref kinda harder way, easier one is in select.jsx
 const Input = forwardRef( function Input({
     label,
     type = 'text',
