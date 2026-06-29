@@ -123,16 +123,20 @@ export class Service {
         }
     }
 
-    async getFilePreview(fileId) {
+    getFilePreview(fileId) {
         try {
-            return this.bucket.getFilePreview(
+            return this.bucket.getFileView(
                 conf.appWriteBucketId,
                 fileId
-            )
+            );
         } catch (error) {
-            console.log("Appwrite service :: getFilePreview :: error", error);
+            console.log(
+                "Appwrite service :: getFilePreview :: error",
+                error
+            );
         }
     }
+
 };
 
 const service = new Service();

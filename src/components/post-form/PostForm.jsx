@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
 
 function PostForm({ post }) {
-    const [register, handleSubmit, watch, setValue, control, getValues] = useForm({
+    const {register, handleSubmit, watch, setValue, control, getValues} = useForm({
         defaultValues: {
             title: post?.title || '',
             slug: post?.slug || '',
@@ -35,11 +35,12 @@ function PostForm({ post }) {
                 navigate(`/post/${dbPost.$id}`)
             }
         } else {
-            const file = await appwriteService.uploadFile(data.image[0]);
+            const file = await service.uploadFile(data.image[0]);
 
             if(file) {
                 const fileId = file.$id;
                 data.featuredImage = fileId;
+                console.log(userData);
                 const dbPost = await service.createPost({ ...data, userId: userData.$id});
 
                 if(dbPost) {
@@ -101,7 +102,7 @@ function PostForm({ post }) {
                 {post && (
                     <div className="w-full mb-4">
                         <img
-                            src={appwriteService.getFilePreview(post.featuredImage)}
+                            src={service.getFilePreview(post.featuredImage)}
                             alt={post.title}
                             className="rounded-lg"
                         />
@@ -110,7 +111,7 @@ function PostForm({ post }) {
                 <Select
                     options={["active", "inactive"]}
                     label="Status"
-                    className="mb-4"
+                    className="mb-5"
                     {...register("status", { required: true })}
                 />
                 <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
