@@ -1,4 +1,4 @@
-# BB-log App 
+# BB-log App
 [App link](https://bb-log-drab.vercel.app/)
 
 A modern blog application built with **React** and powered by **Appwrite** as the backend. The application provides user authentication and blog management features, allowing users to create, view, and manage blog posts through a clean and responsive interface.
@@ -66,13 +66,8 @@ Make sure you have the following installed:
 1. Clone the repository:
 
 ```bash
-<<<<<<< HEAD
-git clone https://github.com/GingerBaddie/bb-log.git
-cd bb-log
-=======
 git clone https://github.com/GingerBaddie/BB-log.git
 cd BB-log
->>>>>>> 9747649fa6b4232e9122c70c115b8e022556c7f1
 ```
 
 2. Install dependencies:
@@ -90,10 +85,6 @@ VITE_APPWRITE_DATABASE_ID=
 VITE_APPWRITE_COLLECTION_ID=
 VITE_APPWRITE_BUCKET_ID=
 VITE_TINYMCE_API_KEY=
-<<<<<<< HEAD
-
-=======
->>>>>>> 9747649fa6b4232e9122c70c115b8e022556c7f1
 ```
 
 4. Start the development server:
