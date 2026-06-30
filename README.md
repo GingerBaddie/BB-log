@@ -65,8 +65,8 @@ Make sure you have the following installed:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/GingerBaddie/bb-log.git
-cd bb-log
+git clone https://github.com/GingerBaddie/BB-log.git
+cd BB-log
 ```
 
 2. Install dependencies:
@@ -84,7 +84,6 @@ VITE_APPWRITE_DATABASE_ID=
 VITE_APPWRITE_COLLECTION_ID=
 VITE_APPWRITE_BUCKET_ID=
 VITE_TINYMCE_API_KEY=
-
 ```
 
 4. Start the development server:
